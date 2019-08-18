@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+/*breadcrumbs*/
+.breadcrumb {
+  background: #fff;
+  margin-top: 53px;
+  margin-left: 132px;
+}
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 13px;
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: #DE4B4B;
+  content: ">\00a0";
+}
+ul.breadcrumb li a {
+  color: #DE4B4B;
+  text-decoration: none;
+}
+ul.breadcrumb li a i {
+  border: 1.2px solid #DE4B4B;
+  border-radius: 50%;
+  width: 25px;
+  text-align: center;
+  color: #DE4B4B;
+  margin-right: 10px;
+  padding-right: 5px;
+  padding-left: 4px;
+}
+ul.breadcrumb li a .check {
+  background: #DE4B4B;
+  color: #fff;
+  padding-right: 4px;
+  padding-left: 2px;
+}
+ul.breadcrumb li a:hover {
+  color: #f00;
+  font-weight: normal;
+}
