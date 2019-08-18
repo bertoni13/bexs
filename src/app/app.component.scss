@@ -1,0 +1,55 @@
+* {
+  font-family:Verdana;
+  color: #fff;
+}
+section {
+  width: 1024px;
+  height: 596px;
+  background: #f00;
+  margin: 0 auto;
+  margin-top: 50px;
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+    .col-4 {
+      background: #DE4B4B 0% 0% no-repeat padding-box;
+      height: 596px;
+      .title {
+        padding-top: 53px;
+        text-align: center;
+        .arrow {
+          font-size: 16px;
+          margin-right: 10px;
+        }
+        span {
+          letter-spacing: -0.01px;
+          font-size: 13px;
+        }
+      }
+      .subtitle {
+        img {
+          margin-left: 45px;
+        }
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+        .desc{
+          width: 207px;
+          font-weight: bold;
+          font-size: 20px;
+          margin-left: 15px;
+        }
+      }
+      .cartao {
+        .bg-cartao {
+          background-image: url("../assets/icons/masc-cartao.svg");
+          background-repeat: no-repeat;
+          height: 224px;
+          width: 365px;
+          margin-left: 45px;
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}
