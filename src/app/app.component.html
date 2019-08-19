@@ -10,7 +10,18 @@
         <div class="desc">Adicione um novo cartão de crédito</div>
       </div>
       <div class="cartao">
-        <div class="bg-cartao"><!-- --></div>
+        <div class="bg-cartao">
+          <div class="num-cartao">
+            <div>* * * *</div>
+            <div>* * * *</div>
+            <div>* * * *</div>
+            <div>* * * *</div>
+          </div>
+          <div class="name-date">
+            <div class="name">NOME DO TITULAR</div>
+            <div class="date">00/00</div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="col-8">
@@ -32,6 +43,29 @@
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>Nome (igual ao cartão)</label>
+          </div>
+          <div class="numbers">
+            <div class="material_input col-valid">
+              <input type="password" required class="valid">
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>Validade</label>
+            </div>
+            <div class="material_input col-valid">
+              <input type="password" required class="valid">
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>CVV</label>
+            </div>
+          </div>
+          <select class="select-css">
+            <option selected>Número de parcelas</option>
+            <option>2x</option>
+            <option>4x</option>
+            <option>12x</option>
+          </select>
+          <div class='confirm'>
+            <button type="button" class="btn btn-primary">Continuar</button>
           </div>
         </form>
       </div>
