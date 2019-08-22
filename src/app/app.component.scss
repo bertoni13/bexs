@@ -67,6 +67,19 @@ section {
             text-shadow: 1px 2px #898989;
           }
         }
+        .open {
+          background-image: url("../assets/icons/cartao-open.svg");
+          background-repeat: no-repeat;
+          height: 224px;
+          width: 365px;
+          margin-left: 45px;
+          margin-top: 30px;
+          img {
+            position: absolute;
+            margin-top: 35px;
+            margin-left: 26px;
+          }
+        }
       }
     }
     .col-8 {
@@ -285,5 +298,8 @@ section {
       background: #DE4B4B 0% 0% no-repeat padding-box;
       border-radius: 10px;
     }
+  }
+  toaster-container {
+    background: #f00;
   }
 }

@@ -41,3 +41,14 @@ ul.breadcrumb li a:hover {
   color: #f00;
   font-weight: normal;
 }
+.toast-success {
+  background: #4caf50;
+  color: #fff;
+  padding: 2%;
+  border-radius: 10px;
+  text-align: center;
+  width: auto;
+  border: 1px solid;
+  margin-top: 10px;
+  box-shadow: 5px 10px 8px #888888;
+}

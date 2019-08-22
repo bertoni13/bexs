@@ -10,7 +10,7 @@
         <div class="desc">Adicione um novo cartão de crédito</div>
       </div>
       <div class="cartao">
-        <div class="bg-cartao">
+        <div class="bg-cartao" *ngIf="!isOn">
           <div class="num-cartao">
             <div>* * * *</div>
             <div>* * * *</div>
@@ -20,6 +20,29 @@
           <div class="name-date">
             <div class="name">NOME DO TITULAR</div>
             <div class="date">00/00</div>
+          </div>
+        </div>
+        <div class="bg-cartao open" *ngIf="isOn">
+          <img src="../assets/icons/visa.png" />
+          <div class="num-cartao">
+            <div>{{ num.substring(0, 4) }}</div>
+            <div>{{ num.substring(4, 8) }}</div>
+            <div>{{ num.substring(8, 12) }}</div>
+            <div>{{ num.substring(12, 16) }}</div>
+          </div>
+          <div class="name-date">
+            <div class="name">{{ name }}</div>
+            <div class="date">{{ date }}</div>
+          </div>
+        </div>
+        <div class="bg-cartao open" *ngIf="versoCartao">
+          <img src="../assets/icons/visa.png" />
+          <div class="num-cartao">
+            <div>teste</div>
+          </div>
+          <div class="name-date">
+            <div class="name">{{ name }}</div>
+            <div class="date">{{ date }}</div>
           </div>
         </div>
       </div>
@@ -33,41 +56,39 @@
       <div class="material_block">
         <form>
           <div class="material_input">
-            <input type="text" required onclick="bortop(0)">
+            <input type="text" required [(ngModel)]="num" name="numero"  maxlength="16" (blur)="onBlur($event.target.value)"/>
             <span class="highlight"></span>
             <span class="bar"></span>
             <label id="mla">Número do cartão</label>
           </div>
           <div class="material_input">
-            <input type="password" required>
+            <input type="text" required [(ngModel)]="name" name="nome" maxlength="20">
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>Nome (igual ao cartão)</label>
           </div>
           <div class="numbers">
             <div class="material_input col-valid">
-              <input type="password" required class="valid">
+              <input type="text" required [(ngModel)]="date" name="data" class="valid" maxlength="5">
               <span class="highlight"></span>
               <span class="bar"></span>
               <label>Validade</label>
             </div>
             <div class="material_input col-valid">
-              <input type="password" required class="valid">
+              <input type="text" required [(ngModel)]="cvv" name="cvv" class="valid" maxlength="3">
               <span class="highlight"></span>
               <span class="bar"></span>
               <label>CVV</label>
             </div>
           </div>
-          <select class="select-css">
-            <option selected>Número de parcelas</option>
-            <option>2x</option>
-            <option>4x</option>
-            <option>12x</option>
-          </select>
+          <select [(ngModel)]="keyboard" name="val" class="select-css">
+    				<option *ngFor="let a of val" [ngValue]="a">{{a.name}}</option>
+    			</select>
           <div class='confirm'>
-            <button type="button" class="btn btn-primary">Continuar</button>
+            <button type="button" class="btn btn-primary" (click)='send()'>Continuar</button>
           </div>
         </form>
+        <toaster-container></toaster-container>
       </div>
     </div>
   </div>
